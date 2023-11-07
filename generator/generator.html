@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Invoice Generator</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="generator.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="">
+            <div class="my-16 mx-20 shadow-xl p-6 rounded">
+                <div class="bold flex text-4xl items-center justify-center">
+                    <div class="center">Invoice Generator</div>
+                </div>
+                <div
+                    class="company bg-gray-100 rounded-lg p-6 mt-16 shadow-inner"
+                >
+                    <div>
+                        <div
+                            class="flex text-2xl bold items-center justify-center"
+                        >
+                            <div class="center">Company Information</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="company-name" class="bold pb-2">Name</label
+                        ><input
+                            type="text"
+                            name="company-name"
+                            id="company-name"
+                            value="Name"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="company-address" class="bold pb-2"
+                            >Address</label
+                        ><input
+                            type="text"
+                            name="company-address"
+                            id="company-address"
+                            value="123 Street Address"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="company-post" class="bold pb-2"
+                            >Post Code</label
+                        ><input
+                            type="text"
+                            name="company-post"
+                            id="company-post"
+                            value="City, State, Zip/Post Code"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="company-phone" class="bold pb-2"
+                            >Phone Number</label
+                        ><input
+                            type="text"
+                            name="company-phone"
+                            id="company-phone"
+                            value="Phone Number"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="company-email" class="bold pb-2"
+                            >Email Address</label
+                        ><input
+                            type="text"
+                            name="company-email"
+                            id="company-email"
+                            value="Email Address"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                </div>
+                <div class="bill bg-gray-100 rounded-lg p-6 mt-16 shadow-inner">
+                    <div>
+                        <div
+                            class="flex text-2xl bold items-center justify-center"
+                        >
+                            <div class="center">Billing Information</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="customer-name" class="bold pb-2">Name</label
+                        ><input
+                            type="text"
+                            name="customer-name"
+                            id="customer-name"
+                            value="Contact Name"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="customer-company-name" class="bold pb-2"
+                            >Company Name</label
+                        ><input
+                            type="text"
+                            name="customer-company-name"
+                            id="customer-company-name"
+                            value="Client Company Name"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="customer-address" class="bold pb-2"
+                            >Address</label
+                        ><input
+                            type="text"
+                            name="customer-address"
+                            id="customer-address"
+                            value="Address"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="customer-phone" class="bold pb-2"
+                            >Phone Number</label
+                        ><input
+                            type="text"
+                            name="customer-phone"
+                            id="customer-phone"
+                            value="Phone Number"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="customer-email" class="bold pb-2"
+                            >Email Address</label
+                        ><input
+                            type="text"
+                            name="customer-email"
+                            id="customer-email"
+                            value="Email Address"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                </div>
+                <div class="ship bg-gray-100 rounded-lg p-6 mt-16 shadow-inner">
+                    <div>
+                        <div
+                            class="flex text-2xl bold items-center justify-center"
+                        >
+                            <div class="center">Shipping Information</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="ship-name" class="bold pb-2"
+                            >Name / Dept</label
+                        ><input
+                            type="text"
+                            name="ship-name"
+                            id="ship-name"
+                            value="Name / Dept"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="ship-company-name" class="bold pb-2"
+                            >Company Name</label
+                        ><input
+                            type="text"
+                            name="ship-company-name"
+                            id="ship-company-name"
+                            value="Client Company Name"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="ship-address" class="bold pb-2"
+                            >Address</label
+                        ><input
+                            type="text"
+                            name="ship-address"
+                            id="ship-address"
+                            value="Address"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="ship-contact" class="bold pb-2"
+                            >Phone Number</label
+                        >
+                        <input
+                            type="text"
+                            name="ship-contact"
+                            id="ship-contact"
+                            value="Phone Number"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="purchases bg-gray-100 rounded-lg p-6 mt-16 shadow-inner"
+                >
+                    <div>
+                        <div
+                            class="flex text-2xl bold items-center justify-center"
+                        >
+                            <div class="center">Purchases</div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <table
+                            class="w-full shadow-xl rounded-lg border-collapse overflow-hidden"
+                        >
+                            <thead class="shadow-xl">
+                                <tr
+                                    class="rounded bg-gradient-to-br from-blue-500 to-blue-700 text-white"
+                                >
+                                    <th class="px-4 py-3">DESCRIPTION</th>
+                                    <th class="px-4 py-3">QTY</th>
+                                    <th class="px-4 py-3">UNIT PRICE</th>
+                                    <th class="px-4 py-3">ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="purchase-item">
+                                    <td class="p-2">
+                                        <input
+                                            type="text"
+                                            name="purchase[description[]]"
+                                            value="Monitorius"
+                                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                                        />
+                                    </td>
+                                    <td class="p-2">
+                                        <input
+                                            type="text"
+                                            name="purchase[qty[]]"
+                                            value="10"
+                                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                                        />
+                                    </td>
+                                    <td class="p-2">
+                                        <input
+                                            type="text"
+                                            name="purchase[unitPrice[]]"
+                                            value="100.99"
+                                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                                        />
+                                    </td>
+                                    <td class="p-2"></td>
+                                </tr>
+                                <tr class="button-row pb-6">
+                                    <td colspan="3"></td>
+                                    <td class="pb-2 px-2">
+                                        <button
+                                            type="button"
+                                            class="w-full inline-flex items-center justify-center font-medium select-none disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-dark-eval-2 px-4 py-2 text-base bg-gradient-to-br from-blue-500 to-blue-700 text-white hover:bg-blue-600 focus:ring-blue-500 rounded-md"
+                                            id="addPurchaseButton"
+                                        >
+                                            Add Purchase
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex flex-col mt-6 w-80">
+                        <label for="discount" class="bold pb-2"
+                            >Discount Percentage</label
+                        ><input
+                            type="text"
+                            name="discount"
+                            id="discount"
+                            value="0"
+                            class="px-4 py-2 border-gray-400 rounded-md focus:border-gray-400 focus:ring focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white block w-full"
+                        />
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="mt-6 inline-flex items-center transition-colors font-medium select-none disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-dark-eval-2 px-4 py-2 text-base bg-gradient-to-br from-blue-500 to-blue-700 text-white hover:bg-blue-600 focus:ring-blue-500 rounded-md"
+                    id="generate"
+                >
+                    Generate
+                </button>
+                <button
+                    type="button"
+                    class="mt-6 ml-2 inline-flex items-center transition-colors font-medium select-none disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-dark-eval-2 px-4 py-2 text-base bg-gradient-to-br from-red-500 to-red-700 text-white hover:bg-red-600 focus:ring-red-500 rounded-md"
+                    id="clearStorage"
+                >
+                    Default
+                </button>
+            </div>
+        </div>
+        <script src="../companyInformation.js"></script>
+        <script src="../billInformation.js"></script>
+        <script src="../shipInformation.js"></script>
+        <script src="../purchase.js"></script>
+        <script src="genericFormControl.js"></script>
+        <script src="localSaver.js"></script>
+    </body>
+</html>

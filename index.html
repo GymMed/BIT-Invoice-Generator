@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Invoice</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="invoice-header">
+                <div class="invoice-header__name">INVOICE</div>
+                <div class="invoice-header__logo">
+                    <div class="invoice-header__logo__circle">
+                        <span class="invoice-header__logo__circle__text"
+                            >LOGO</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="essentials">
+                <div class="essentials__company">
+                    <div class="essentials__company__field" id="company-name">
+                        Name
+                    </div>
+                    <div
+                        class="essentials__company__field"
+                        id="company-address"
+                    >
+                        lorem
+                    </div>
+                    <div class="essentials__company__field" id="company-post">
+                        lorem
+                    </div>
+                    <div class="essentials__company__field" id="company-phone">
+                        Phone Number
+                    </div>
+                    <div class="essentials__company__field" id="company-email">
+                        Email Address
+                    </div>
+                </div>
+                <div class="essentials__date">
+                    <div class="essentials__date__formats" id="dash-date">
+                        2023-11-06
+                    </div>
+                    <div
+                        class="essentials__date__formats"
+                        id="without-dash-date"
+                    >
+                        20231106
+                    </div>
+                </div>
+            </div>
+            <div class="customer-information">
+                <div class="customer-information__bill-to">
+                    <div class="customer-information__bill-to__header">
+                        BILL TO
+                    </div>
+                    <div class="customer-information__bill-to__body">
+                        <div id="customer-name">lorem</div>
+                        <div id="customer-company-name">lorem</div>
+                        <div id="customer-address">lorem</div>
+                        <div id="customer-contact">lorem</div>
+                    </div>
+                </div>
+                <div class="customer-information__ship-to">
+                    <div class="customer-information__ship-to__header">
+                        SHIP TO
+                    </div>
+                    <div class="customer-information__ship-to__body">
+                        <div id="ship-name">lorem</div>
+                        <div id="ship-company-name">lorem</div>
+                        <div id="ship-address">lorem</div>
+                        <div id="ship-contact">lorem</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table class="purchase">
+                    <thead>
+                        <tr class="purchase__header__row">
+                            <th class="purchase__header__row__column">
+                                DESCRIPTION
+                            </th>
+                            <th class="purchase__header__row__column">QTY</th>
+                            <th class="purchase__header__row__column">
+                                UNIT PRICE
+                            </th>
+                            <th class="purchase__header__row__column">TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="purchase__body__row">
+                            <td class="purchase__body__row__column">
+                                Monitorius
+                            </td>
+                            <td class="purchase__body__row__column">10</td>
+                            <td class="purchase__body__row__column">100.99</td>
+                            <td class="purchase__body__row__column">1,009.9</td>
+                        </tr>
+                        <tr class="purchase__body__row--calculations">
+                            <td
+                                class="purchase__body__row--calculations__blank"
+                                colspan="2"
+                            ></td>
+                            <td
+                                class="purchase__body__row--calculations__words"
+                            >
+                                SUBTOTAL
+                            </td>
+                            <td
+                                class="purchase__body__row--calculations__sums"
+                                id="subtotal"
+                            >
+                                1,009.9
+                            </td>
+                        </tr>
+                        <tr class="purchase__body__row--calculations">
+                            <td
+                                class="purchase__body__row--calculations__blank"
+                                colspan="2"
+                            ></td>
+                            <td
+                                class="purchase__body__row--calculations__words"
+                            >
+                                DISCOUNT
+                            </td>
+                            <td
+                                class="purchase__body__row--calculations__sums"
+                                id="discount"
+                            >
+                                0.00
+                            </td>
+                        </tr>
+                        <tr class="purchase__body__row--final-calculations">
+                            <td
+                                class="purchase__body__row--final--calculations__blank"
+                                colspan="2"
+                            ></td>
+                            <td
+                                class="purchase__body__row--final-calculations__words"
+                            >
+                                Balance Due
+                            </td>
+                            <td
+                                class="purchase__body__row--final-calculations__sums"
+                                id="balance"
+                            >
+                                &euro; 1,009.90
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="companyInformation.js"></script>
+        <script src="billInformation.js"></script>
+        <script src="shipInformation.js"></script>
+        <script src="purchase.js"></script>
+        <script src="/generator/genericFormControl.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

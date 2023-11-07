@@ -1,0 +1,192 @@
+:root {
+    --darker-text: rgb(0, 0, 139);
+    --padding-x-containers: 0.3rem;
+    --width-right-dates: 10rem;
+}
+
+* {
+    font-family: "Roboto";
+}
+
+.main {
+    padding-top: 3rem;
+    margin: 0rem auto;
+    width: 40rem;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.3;
+}
+
+.invoice-header__name {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.invoice-header__logo {
+    display: flex;
+    justify-content: center;
+    width: var(--width-right-dates);
+}
+
+.invoice-header__logo__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: gray;
+    width: 7rem;
+    height: 7rem;
+}
+
+.invoice-header__logo__circle__text {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.essentials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0rem var(--padding-x-containers);
+}
+
+.essentials__company {
+    color: var(--darker-text);
+    font-size: 1.2rem;
+}
+
+.essentials__company__field {
+    margin-bottom: 0.5rem;
+}
+
+.essentials__date__formats {
+    text-align: center;
+    color: var(--darker-text);
+    border-bottom: 1px solid rgb(180, 180, 180);
+    padding-bottom: 0.5rem;
+    width: var(--width-right-dates);
+    font-weight: bold;
+}
+
+.essentials__date {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.customer-information {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+}
+
+.customer-information__ship-to__header,
+.customer-information__bill-to__header {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--darker-text);
+    border-bottom: 1px solid rgb(180, 180, 180);
+    margin-bottom: 1.5rem;
+    padding: 0.2rem var(--padding-x-containers);
+}
+
+.customer-information__bill-to__body,
+.customer-information__ship-to__body {
+    padding: 0rem var(--padding-x-containers);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.customer-information__ship-to {
+    flex-grow: 1;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.customer-information__bill-to {
+    flex-grow: 1;
+    padding: 0rem 2.5rem 0rem 0rem;
+}
+
+.purchase {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.purchase__header__row {
+    font-weight: bold;
+    color: white;
+}
+
+.purchase__body__row {
+}
+
+.purchase__header__row__column {
+    background-color: rgb(0, 119, 255);
+    border-right: 1px solid gray;
+    padding: 0.3rem 0.2rem;
+}
+
+.purchase__header__row__column:nth-child(1) {
+    width: 50%;
+}
+
+.purchase__header__row__column:nth-child(3) {
+    width: 15%;
+}
+
+.purchase__body__row__column {
+    padding: 0.3rem 0.2rem;
+    border: 1px solid gray;
+}
+
+.purchase__body__row--calculations {
+}
+
+.purchase__body__row--calculations__words {
+    text-align: end;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.purchase__body__row--calculations__sums {
+    border-bottom: 1px solid gray;
+    padding: 0.3rem 0.2rem;
+    text-align: end;
+}
+
+.purchase__body__row--negative {
+    background-color: darkgray;
+}
+
+.purchase__body__row--negative__column {
+    padding: 0.3rem 0.2rem;
+    border: 1px solid gray;
+}
+
+.purchase__body__row--final-calculations {
+}
+
+.purchase__body__row--final-calculations__words {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: end;
+}
+
+.purchase__body__row--final-calculations__sums {
+    padding: 1rem 0.2rem;
+    background-color: lightblue;
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: end;
+}
